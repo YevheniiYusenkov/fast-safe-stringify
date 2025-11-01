@@ -10,7 +10,14 @@
     "safe",
     "serialize"
   ],
-  "main": "index.js",
+  "main": "./cjs/index.js",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./esm/index.js",
+      "require": "./cjs/index.js"
+    }
+  },
   "scripts": {
     "test": "standard && tap --no-esm test.js test-stable.js",
     "benchmark": "node benchmark.js"

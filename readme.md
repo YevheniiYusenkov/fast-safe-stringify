@@ -1,5 +1,7 @@
 # fast-safe-stringify
 
+> **Note:** This is a fork of the original repository with added support for both ESM (ECMAScript Modules) and CommonJS formats with proper import/export handling. The package exports are configured correctly for both module systems.
+
 Safe and fast serialization alternative to [JSON.stringify][].
 
 Gracefully handles circular structures instead of throwing in most cases.
@@ -14,6 +16,8 @@ handle circular structures. See the example below for further information.
 The same as [JSON.stringify][].
 
 `stringify(value[, replacer[, space[, options]]])`
+
+### CommonJS
 
 ```js
 const safeStringify = require('fast-safe-stringify')
@@ -52,7 +56,15 @@ console.log(serialized)
 ```
 
 
+### ESM (ECMAScript Modules)
+
+```js
+import safeStringify from 'fast-safe-stringify'
+```
+
 Using the deterministic version also works the same:
+
+### CommonJS
 
 ```js
 const safeStringify = require('fast-safe-stringify')
@@ -65,6 +77,12 @@ console.log(safeStringify.stableStringify(o))
 // '{"a":0,"b":1,"o":"[Circular]"}'
 console.log(JSON.stringify(o))
 // TypeError: Converting circular structure to JSON
+```
+
+### ESM
+
+```js
+import safeStringify from 'fast-safe-stringify'
 ```
 
 A faster and side-effect free implementation is available in the
