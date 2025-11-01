@@ -1,7 +1,7 @@
 {
-  "name": "fast-safe-stringify",
+  "name": "fast-safe-stringify-esm",
   "version": "2.1.2",
-  "description": "Safely and quickly serialize JavaScript objects",
+  "description": "Safely and quickly serialize JavaScript objects ESM/CJS",
   "keywords": [
     "stable",
     "stringify",
@@ -9,6 +9,12 @@
     "JSON.stringify",
     "safe",
     "serialize"
+  ],
+  "files": [
+    "esm",
+    "cjs",
+    "index.d.ts",
+    "README.md"
   ],
   "main": "./cjs/index.js",
   "exports": {
@@ -43,11 +49,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/davidmarkclements/fast-safe-stringify.git"
+    "url": "git+https://github.com/YevheniiYusenkov/fast-safe-stringify-esm.git"
   },
   "bugs": {
-    "url": "https://github.com/davidmarkclements/fast-safe-stringify/issues"
+    "url": "https://github.com/YevheniiYusenkov/fast-safe-stringify-esm/issues"
   },
-  "homepage": "https://github.com/davidmarkclements/fast-safe-stringify#readme",
+  "homepage": "https://github.com/YevheniiYusenkov/fast-safe-stringify-esm#readme",
   "dependencies": {}
 }
